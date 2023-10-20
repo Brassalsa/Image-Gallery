@@ -2,26 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --bg: #f1f5f9;
+    --textClr: #0f172a;
+    --softBg: #d5dce6;
+    --softClr: #324057;
+    --prim: #0e4558;
   }
 }
 
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  height: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+a {
+  color: var(--prim);
+}
+
+a:hover {
+  @apply transition-all duration-200 opacity-80;
+}
+
+.dark {
+  --bg: #0f172a;
+  --textClr: #f1f5f9;
+  --softBg: #2a3a54;
+  --softClr: #cbd5e1;
+  --prim: #98e0ff;
 }
