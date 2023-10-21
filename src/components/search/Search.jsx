@@ -22,7 +22,7 @@ const Search = ({
     }, 500);
 
     return () => clearTimeout(handler);
-  }, [inp]);
+  }, [inp, searchRoute]);
 
   function handleChange(e) {
     const value = e.target.value;
