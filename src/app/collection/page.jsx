@@ -3,9 +3,8 @@ import List from "./component/List";
 import Paging from "@/components/paging/Paging";
 
 async function getData(page = 1) {
-  const data = await fetch(unsplash("collections", "page=" + page));
-
-  return data.json();
+  const data = await unsplash("collections", "page=" + page);
+  return data;
 }
 
 const Collection = async ({ searchParams }) => {

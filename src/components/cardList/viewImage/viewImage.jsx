@@ -4,7 +4,6 @@ import Link from "next/link";
 
 const ViewImage = ({ data, open, setOpen }) => {
   const { urls, user, likes, alt_description, description } = data;
-  console.log(data);
 
   if (open)
     return (

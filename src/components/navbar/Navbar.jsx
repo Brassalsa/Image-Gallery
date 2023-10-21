@@ -1,9 +1,10 @@
+"use client";
+
 import React from "react";
 import ThemeToggle from "../themeToggle/ThemeToggle";
 import Link from "next/link";
 import Search from "../search/Search";
 import Burger from "./Burger";
-import SearchIcon from "./SearchIcon";
 
 const Navbar = () => {
   return (
@@ -20,14 +21,19 @@ const Navbar = () => {
       </nav>
       <nav className="sm:hidden justify-self-end pr-2">
         <Burger>
-          <ThemeToggle />
-          <Search
-            placeholder="Search Images Here"
-            className="rounded-md bg-primBg text-primText p-1  min-w-full"
-          />
-          <Link href="/">Explore</Link>
-          <Link href={"/collection"}>Collection</Link>
-          <Link href={"/topics"}>Topics</Link>
+          <div
+            className="flex flex-col gap-5"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <ThemeToggle />
+            <Search
+              placeholder="Search Images Here"
+              className="rounded-md bg-primBg text-primText p-1  min-w-full"
+            />
+            <Link href="/">Explore</Link>
+            <Link href={"/collection"}>Collection</Link>
+            <Link href={"/topics"}>Topics</Link>
+          </div>
         </Burger>
       </nav>
     </>

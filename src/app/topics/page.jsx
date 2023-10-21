@@ -1,12 +1,11 @@
-import Paging from "@/components/paging/Paging";
 import unsplash from "@/utils/unsplash";
 import Link from "next/link";
 import React from "react";
 
 async function getData(page) {
-  const res = await fetch(unsplash("topics", "page=" + page));
+  const res = await unsplash("topics", "page=" + page);
 
-  return res.json();
+  return res;
 }
 
 const Community = async ({ searchParams }) => {

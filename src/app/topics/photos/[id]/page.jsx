@@ -3,9 +3,9 @@ import unsplash from "@/utils/unsplash";
 import React from "react";
 
 async function getData(id, page = 1) {
-  const res = await fetch(unsplash("topics/" + id + "/photos", "page=" + page));
+  const res = await unsplash("topics/" + id + "/photos", "page=" + page);
 
-  return res.json();
+  return res;
 }
 
 const TopicPhotos = async ({ params, searchParams }) => {

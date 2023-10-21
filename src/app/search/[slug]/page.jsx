@@ -2,12 +2,12 @@ import CardList from "@/components/cardList/CardList";
 import unsplash from "@/utils/unsplash";
 
 async function getData(slug, page = 1) {
-  const res = await fetch(
-    unsplash("search/photos", "query=" + slug + "&page=" + page)
+  const res = await unsplash(
+    "search/photos",
+    "query=" + slug + "&page=" + page
   );
-  const data = await res.json();
 
-  return data.results;
+  return await res.results;
 }
 const SearchPhoto = async ({ params, searchParams }) => {
   const { slug } = params;

@@ -4,8 +4,7 @@ import Image from "next/image";
 import unsplash from "@/utils/unsplash";
 
 async function getData(page = 1) {
-  const res = await fetch(unsplash("photos", "page=" + page));
-  const data = await res.json();
+  const data = await unsplash("photos", "page=" + page);
   return data;
 }
 

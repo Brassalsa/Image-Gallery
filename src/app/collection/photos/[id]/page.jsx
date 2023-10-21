@@ -3,10 +3,12 @@ import unsplash from "@/utils/unsplash";
 import React from "react";
 
 const getData = async (id, page = 1) => {
-  const res = await fetch(
-    unsplash(`/collections/${id}/photos`, "page=" + (page || 1))
+  const res = await unsplash(
+    `/collections/${id}/photos`,
+    "page=" + (page || 1)
   );
-  return await res.json();
+
+  return res;
 };
 
 const CollectionPhotos = async ({ params, searchParams }) => {
