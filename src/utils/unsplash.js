@@ -1,8 +1,8 @@
 "use server";
 
 const unsplash = async (route = "photos", query = "") => {
-  const clientId = process.env.UNSPLASH_ACCESS_KEY;
-  const url =
+  let clientId = process.env.UNSPLASH_ACCESS_KEY;
+  const url = (client_id = clientId) =>
     "https://api.unsplash.com/" +
     route +
     "?" +
@@ -10,7 +10,11 @@ const unsplash = async (route = "photos", query = "") => {
     "&client_id=" +
     clientId;
 
-  const res = await fetch(url);
+  let res = await fetch(url(clientId));
+  if (!res.ok) {
+    clientId = process.env.UNSPLASH_ACCESS_KEY_2;
+    res = await fetch(url(clientId));
+  }
   const data = await res.json();
   return data;
 };
