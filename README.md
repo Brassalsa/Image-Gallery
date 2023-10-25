@@ -29,8 +29,12 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## .env variables
+UNSPLASH_ACCESS_KEY = <YOUR_API_KEY>
+UNSPLASH_ACCESS_KEY_2 = <SECOND_API_KEY>
+Data is bieng fetched from [Unsplash](https://unsplash.com/). Dev api provides 50 req/hr. Make sure to make 2 apps to increase api requests.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Live Preview
+This app is deployed on [Netlify](https://image-gallery-next.netlify.app/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
