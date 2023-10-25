@@ -31,7 +31,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 -  Make sure to make 2 apps to increase api requests.
 
 ## Live Preview
-This app is deployed on [Netlify](https://image-gallery-next.netlify.app/)
+- This app is deployed on [Netlify](https://app.netlify.com/)
+- Here's live preview [image-gallery](https://image-gallery-next.netlify.app/)
 
 ## Learn More
 
