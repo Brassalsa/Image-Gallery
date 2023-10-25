@@ -30,8 +30,8 @@ To learn more about Next.js, take a look at the following resources:
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
 ## .env variables
-UNSPLASH_ACCESS_KEY = <YOUR_API_KEY>
-UNSPLASH_ACCESS_KEY_2 = <SECOND_API_KEY>
+- UNSPLASH_ACCESS_KEY = <YOUR_API_KEY>
+- UNSPLASH_ACCESS_KEY_2 = <SECOND_API_KEY>
 Data is bieng fetched from [Unsplash](https://unsplash.com/). Dev api provides 50 req/hr. Make sure to make 2 apps to increase api requests.
 
 ## Live Preview
