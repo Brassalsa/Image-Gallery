@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
           <ThemeProvider>
             <div className="min-h-[100vh] bg-primBg text-primText">
               <Header />
-              {children}
+              <div className="pt-24">{children}</div>
             </div>
           </ThemeProvider>
         </ThemeContextProvider>

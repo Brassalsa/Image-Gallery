@@ -22,21 +22,22 @@ const Burger = ({ children }) => {
       {open && (
         <div
           className={
-            "cursor-pointer flex flex-col gap-3 bg-softBg  rounded-md h-[100vh] bg-opacity-80" +
-            className
+            "cursor-pointer flex gap-3   rounded-md h-[100vh] fixed top-0 left-0 w-[100vw] justify-end items-end"
           }
           onClick={(e) => setOpen(false)}
         >
-          <span
-            className={"self-end text-2xl w-fit"}
-            onClick={(e) => {
-              setOpen(false);
-              e.stopPropagation();
-            }}
-          >
-            X
-          </span>
-          {children}
+          <div className="h-full min-w-[60%] bg-softBg flex flex-col p-7">
+            <span
+              className={"self-end text-2xl w-fit"}
+              onClick={(e) => {
+                setOpen(false);
+                e.stopPropagation();
+              }}
+            >
+              X
+            </span>
+            {children}
+          </div>
         </div>
       )}
     </div>

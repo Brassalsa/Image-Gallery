@@ -9,7 +9,7 @@ import Burger from "./Burger";
 const Navbar = () => {
   return (
     <>
-      <nav className="hidden sm:flex gap-4 justify-stretch flex-1 pr-2">
+      <nav className="hidden sm:flex gap-6 justify-stretch flex-1 pr-2">
         <Search
           placeholder="Search Images Here"
           className="rounded-md bg-softBg text-softClr p-1  min-w-full"
